@@ -1,0 +1,150 @@
+%-------------------------------------------------------------------------------
+%  Recommendation Letter for Xingwei Qu
+%  Author : Jie Fu (Fujie)
+%  Style  : Academic / Formal
+%-------------------------------------------------------------------------------
+\documentclass[11pt,a4paper]{letter}
+
+%---------------------------- Packages ----------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}                       % clean serif body
+\usepackage[sc]{mathpazo}                  % Palatino-style serif, scholarly feel
+\linespread{1.10}
+\usepackage{microtype}
+\usepackage[a4paper,
+            top=1.05in,
+            bottom=1.15in,
+            left=1.10in,
+            right=1.10in]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{parskip}                       % spacing between paragraphs
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+
+%---------------------------- Colors ------------------------------------------
+\definecolor{accent}{HTML}{1F3A5F}         % deep academic blue
+\definecolor{rule}{HTML}{1F3A5F}
+\definecolor{subtle}{HTML}{6B6B6B}
+
+%---------------------------- Letterhead --------------------------------------
+% Replace the placeholders below with your real details before exporting.
+\newcommand{\senderName}{Jie Fu, Ph.D.}
+\newcommand{\senderTitle}{Researcher}
+\newcommand{\senderAffiliation}{[Your Affiliation]}
+\newcommand{\senderEmail}{[Your Email]}
+\newcommand{\senderPhone}{[Your Phone]}
+\newcommand{\senderWebsite}{[Your Website / ORCID]}
+
+%---------------------------- Header macro ------------------------------------
+\makeatletter
+\renewcommand{\opening}[1]{%
+  \begin{flushleft}
+    {\Large\bfseries\color{accent}\senderName}\\[2pt]
+    {\itshape\color{subtle}\senderTitle}\\
+    {\color{subtle}\senderAffiliation}\\[4pt]
+    {\small\color{subtle}%
+       \senderEmail \ \textbar\ \senderPhone \ \textbar\ \senderWebsite}
+  \end{flushleft}
+  \vspace{-4pt}
+  {\color{rule}\rule{\linewidth}{0.6pt}}
+  \vspace{14pt}
+
+  \begin{flushleft}
+    \@date
+  \end{flushleft}
+  \vspace{6pt}
+
+  \noindent #1\par\nobreak
+  \vspace{8pt}
+}
+\makeatother
+
+%---------------------------- Closing macro -----------------------------------
+\renewcommand{\closing}[1]{%
+  \vspace{12pt}\noindent #1\\[42pt]
+  \noindent\senderName\\
+  \noindent{\itshape\color{subtle}\senderTitle}
+}
+
+%---------------------------- Document ----------------------------------------
+\begin{document}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+\begin{letter}{}
+
+\date{May 17, 2026}
+
+\opening{Dear Anthropic Team,}
+
+\justifying
+
+I am writing to strongly recommend Xingwei Qu.
+
+I have known Xingwei for many years, and I have had the opportunity to observe
+his development over a long period of time. What makes him particularly
+impressive is that I have seen him change from a pure engineer into a serious
+researcher. When I first knew him, his strongest qualities were execution
+speed, coding ability, and engineering ownership. Over the years, especially
+through his work in large-scale model training and pretraining research, he
+has developed the ability to ask deep research questions and to connect
+implementation with scientific insight.
+
+My own background gives me a particular lens on this. I spent roughly five
+years in the Mila / University of Montreal research environment, including
+postdoctoral work with Yoshua Bengio, and I have been deeply influenced by
+research questions around human-friendly, reliable, and safe AI. From that
+perspective, I think Xingwei is a very promising candidate. He is not only
+interested in building more capable systems; he is increasingly interested in
+how these systems reason, how they can be evaluated, and how their internal
+computation can be made more efficient, inspectable, and controllable.
+
+Xingwei's engineering ability is genuinely outstanding. He has worked as a
+senior algorithm engineer at Xiaopeng and later on large-scale pretraining
+and model research at ByteDance Seed. He has the rare ability to take an
+ambiguous technical goal, turn it into a concrete implementation plan, build
+the infrastructure, debug the system, run experiments, and produce useful
+evidence quickly. He is not merely a prototype engineer; he thinks about
+training stability, data quality, evaluation, reproducibility, and how the
+code supports the research question.
+
+At the same time, his research ability has grown very quickly. His recent
+work on Dynamic Large Concept Models, ConceptMoE, latent reasoning, and
+compute-efficient pretraining shows that he is now thinking beyond standard
+engineering optimization. He is asking questions about the unit of reasoning
+in large models, how computation should be allocated, how token-level
+representations can be compressed into higher-level semantic units, and how
+we can evaluate reasoning beyond surface-level chain-of-thought behavior.
+These are exactly the kinds of questions that require both strong systems
+intuition and real research taste.
+
+Recently, we have also been discussing and collaborating on AI safety-related
+directions, including latent reasoning, verification, agent evaluation, and
+how to construct training and evaluation pipelines that can reveal whether
+models are following robust internal procedures. I find his motivation
+genuine. He is not approaching AI safety as a slogan; he is approaching it as
+an engineer-researcher who wants to build concrete methods, benchmarks, and
+systems that make advanced AI more reliable and understandable.
+
+The main area where Xingwei can still improve is prioritization. Because he
+is extremely energetic and can implement quickly, he sometimes opens too many
+research directions at once. I have seen this in recent discussions where he
+proposed several promising safety-related directions simultaneously. My
+feedback to him was to narrow the work into one sharper claim, one clearer
+experimental pipeline, and one concrete set of success and failure criteria.
+He responded very well, which is another reason I trust his trajectory. He is
+ambitious, but also coachable and willing to refine his thinking.
+
+Overall, I strongly recommend Xingwei. He has the execution velocity of an
+excellent engineer, the emerging taste of a strong researcher, and a genuine
+interest in the kinds of safety and reliability questions that matter for
+advanced AI systems. I believe he would be a very strong fit for Anthropic.
+
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}
