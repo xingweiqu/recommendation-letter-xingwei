@@ -23,7 +23,6 @@
 \usepackage{parskip}
 \usepackage{enumitem}
 \usepackage{ragged2e}
-\usepackage{soul}                          % letterspacing
 
 %---------------------------- Colors ------------------------------------------
 \definecolor{accent}{HTML}{0B2545}         % Oxford blue
@@ -47,17 +46,15 @@
 \makeatletter
 \renewcommand{\opening}[1]{%
   \begin{flushleft}
-    {\fontsize{20}{24}\selectfont\bfseries\color{accent}%
-      \so{Jie Fu}\,\normalfont\color{accent}\bfseries, Ph.D.}\\[3pt]
+    {\fontsize{22}{26}\selectfont\bfseries\color{accent}\senderName}\\[4pt]
     {\sffamily\small\color{accent}\senderTitle\ \,\textbullet\,\ \senderAffiliation}\\[6pt]
     {\sffamily\footnotesize\color{subtle}%
        \senderEmail \quad\textcolor{accentSoft}{\textbar}\quad
        \senderWebsite \quad\textcolor{accentSoft}{\textbar}\quad
        \senderScholar}
   \end{flushleft}
-  \vspace{2pt}
-  {\color{rule}\rule{\linewidth}{0.8pt}}\\[-3pt]
-  {\color{accentSoft}\rule{\linewidth}{0.3pt}}
+  \vspace{4pt}
+  {\color{rule}\rule{\linewidth}{0.6pt}}
   \vspace{18pt}
 
   \begin{flushleft}
